@@ -3,15 +3,12 @@ package main
 import (
 	"log"
 
-	"iteung/config"
+	"github.com/agung6544/ws-agung-2024/config"
 
 	"github.com/aiteung/musik"
 	"github.com/gofiber/fiber/v2/middleware/cors"
 
-
-	"iteung/url"
-
-	"github.com/gofiber/fiber/v2"
+	"github.com/agung6544/ws-agung-2024/url"
 )
 
 func main() {
