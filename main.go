@@ -5,10 +5,10 @@ import (
 
 	"github.com/agung6544/ws-agung-2024/config"
 
-	"github.com/aiteung/musik"
-	"github.com/gofiber/fiber/v2/middleware/cors"
-
 	"github.com/agung6544/ws-agung-2024/url"
+	"github.com/aiteung/musik"
+	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/cors"
 )
 
 func main() {
