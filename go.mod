@@ -8,11 +8,7 @@ require (
 	github.com/aiteung/musik v0.0.5
 	github.com/gofiber/fiber/v2 v2.52.4
 	github.com/whatsauth/whatsauth v0.2.9
-<<<<<<< HEAD
 	go.mau.fi/whatsmeow v0.0.0-20240327124018-350073db195c
-=======
-	go.mau.fi/whatsmeow v0.0.0-20240523075404-7f13c31d2cb1
->>>>>>> 310221cb3e4c7dea0e212c05257929fadcd700d9
 	go.mongodb.org/mongo-driver v1.15.0
 )
 
