@@ -3,7 +3,7 @@ module github.com/agung6544/ws-agung-2024
 go 1.22.1
 
 require (
-	github.com/agung6544/packageweek10 v0.0.2
+	github.com/agung6544/packageweek10 v0.0.3
 	github.com/aiteung/atdb v0.1.7
 	github.com/aiteung/musik v0.0.5
 	github.com/gofiber/fiber/v2 v2.52.4
