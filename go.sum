@@ -16,8 +16,8 @@ github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/internal v1.0.0 h1:D3occ
 github.com/Azure/azure-sdk-for-go/sdk/security/keyvault/internal v1.0.0/go.mod h1:bTSOgj05NGRuHHhQwAdPnYr9TOdNmKlZTgGLL6nyAdI=
 github.com/AzureAD/microsoft-authentication-library-for-go v1.2.1 h1:DzHpqpoJVaCgOUdVHxE8QB52S6NiVdDQvGlny1qvPqA=
 github.com/AzureAD/microsoft-authentication-library-for-go v1.2.1/go.mod h1:wP83P5OoQ5p6ip3ScPr0BAq0BvuPAvacpEuSzyouqAI=
-github.com/agung6544/packageweek10 v0.0.3 h1:WJcaa5G7oouqqv0Yv2ddW7w15EPBMeC7np90/Na1Mwg=
-github.com/agung6544/packageweek10 v0.0.3/go.mod h1:RsBYoIvM5M4ZVvbRG4lnpVX5Ctyo1bIp4Y6oJB+qyqg=
+github.com/agung6544/packageweek10 v0.0.4 h1:GE7pLMx35PsrA9hcqfgovJ9fuSsljo7NWq2ccey8ZZ8=
+github.com/agung6544/packageweek10 v0.0.4/go.mod h1:RsBYoIvM5M4ZVvbRG4lnpVX5Ctyo1bIp4Y6oJB+qyqg=
 github.com/aiteung/atapi v0.1.1 h1:dJDCuOJ42ABugKWSeN86a6hc1XLVKU7uA7lQD8VmT84=
 github.com/aiteung/atapi v0.1.1/go.mod h1:kGz2vwWxDL8wmXEdMIJDBOxYKcZ4b/QR8D0Hi49DQw4=
 github.com/aiteung/atdb v0.1.7 h1:EV7vk5ld8i1wlrzf9N3FGDcvYvQz0dCnb0m2WCbRFOk=
