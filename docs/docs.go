@@ -18,13 +18,126 @@ const docTemplate = `{
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
-    "paths": {}
+    "paths": {
+        "/presensi": {
+            "get": {
+                "description": "Mengambil semua data presensi.",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Presensi"
+                ],
+                "summary": "Get All Data Presensi.",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/controller.Presensi"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "controller.JamKerja": {
+            "type": "object",
+            "properties": {
+                "durasi": {
+                    "type": "integer"
+                },
+                "gmt": {
+                    "type": "integer"
+                },
+                "hari": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "jam_keluar": {
+                    "type": "string"
+                },
+                "jam_masuk": {
+                    "type": "string"
+                },
+                "piket_tim": {
+                    "type": "string"
+                },
+                "shift": {
+                    "type": "integer"
+                }
+            }
+        },
+        "controller.Karyawan": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "hari_kerja": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "jabatan": {
+                    "type": "string"
+                },
+                "jam_kerja": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/controller.JamKerja"
+                    }
+                },
+                "nama": {
+                    "type": "string"
+                },
+                "phone_number": {
+                    "type": "string"
+                }
+            }
+        },
+        "controller.Presensi": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+                },
+                "biodata": {
+                    "$ref": "#/definitions/controller.Karyawan"
+                },
+                "checkin": {
+                    "type": "string"
+                },
+                "datetime": {
+                    "type": "string"
+                },
+                "latitude": {
+                    "type": "number"
+                },
+                "location": {
+                    "type": "string"
+                },
+                "longitude": {
+                    "type": "number"
+                },
+                "phone_number": {
+                    "type": "string"
+                }
+            }
+        }
+    }
 }`
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = &swag.Spec{
 	Version:          "1.0",
-	Host:             "https://ws-agung-2024-b77249100221.herokuapp.com",
+	Host:             "ws-agung-2024-b77249100221.herokuapp.com",
 	BasePath:         "/",
 	Schemes:          []string{"https", "http"},
 	Title:            "TES SWAGGER ULBI",
