@@ -26,6 +26,11 @@ func Homepage(c *fiber.Ctx) error {
 // @Produce json
 // @Success 200 {object} Presensi
 // @Router /presensi [get]
+func GetPresensi(c *fiber.Ctx) error {
+	ps := cek.GetAllPresensi(config.Ulbimongoconn, "presensi")
+	return c.JSON(ps)
+}
+
 // GetPresensiID godoc
 // @Summary Get By ID Data Presensi.
 // @Description Ambil per ID data presensi.
@@ -38,11 +43,6 @@ func Homepage(c *fiber.Ctx) error {
 // @Failure 404
 // @Failure 500
 // @Router /presensi/{id} [get]
-func GetPresensi(c *fiber.Ctx) error {
-	ps := cek.GetAllPresensi(config.Ulbimongoconn, "presensi")
-	return c.JSON(ps)
-}
-
 func GetPresensiID(c *fiber.Ctx) error {
 	id := c.Params("id")
 	if id == "" {
@@ -74,6 +74,17 @@ func GetPresensiID(c *fiber.Ctx) error {
 	return c.JSON(ps)
 }
 
+// InsertDataPresensi godoc
+// @Summary Insert data presensi.
+// @Description Input data presensi.
+// @Tags Presensi
+// @Accept json
+// @Produce json
+// @Param request body Presensi true "Payload Body [RAW]"
+// @Success 200 {object} Presensi
+// @Failure 400
+// @Failure 500
+// @Router /ins [post]
 func InsertDataPresensi(c *fiber.Ctx) error {
 	db := config.Ulbimongoconn
 	var presensi inimodel.Presensi
