@@ -71,16 +71,59 @@ paths:
     get:
       consumes:
       - application/json
-      description: Mengambil semua data presensi.
+      - application/json
+      description: |-
+        Mengambil semua data presensi.
+        Ambil per ID data presensi.
       produces:
+      - application/json
       - application/json
       responses:
         "200":
           description: OK
           schema:
             $ref: '#/definitions/controller.Presensi'
-      summary: Get All Data Presensi.
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+        "500":
+          description: Internal Server Error
+      summary: Get By ID Data Presensi.
       tags:
+      - Presensi
+      - Presensi
+  /presensi/{id}:
+    get:
+      consumes:
+      - application/json
+      - application/json
+      description: |-
+        Mengambil semua data presensi.
+        Ambil per ID data presensi.
+      parameters:
+      - description: Masukan ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/controller.Presensi'
+        "400":
+          description: Bad Request
+        "404":
+          description: Not Found
+        "500":
+          description: Internal Server Error
+      summary: Get By ID Data Presensi.
+      tags:
+      - Presensi
       - Presensi
 schemes:
 - https

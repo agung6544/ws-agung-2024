@@ -26,6 +26,18 @@ func Homepage(c *fiber.Ctx) error {
 // @Produce json
 // @Success 200 {object} Presensi
 // @Router /presensi [get]
+// GetPresensiID godoc
+// @Summary Get By ID Data Presensi.
+// @Description Ambil per ID data presensi.
+// @Tags Presensi
+// @Accept json
+// @Produce json
+// @Param id path string true "Masukan ID"
+// @Success 200 {object} Presensi
+// @Failure 400
+// @Failure 404
+// @Failure 500
+// @Router /presensi/{id} [get]
 func GetPresensi(c *fiber.Ctx) error {
 	ps := cek.GetAllPresensi(config.Ulbimongoconn, "presensi")
 	return c.JSON(ps)

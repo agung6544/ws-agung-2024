@@ -19,23 +19,79 @@
     "paths": {
         "/presensi": {
             "get": {
-                "description": "Mengambil semua data presensi.",
+                "description": "Mengambil semua data presensi.\nAmbil per ID data presensi.",
                 "consumes": [
+                    "application/json",
                     "application/json"
                 ],
                 "produces": [
+                    "application/json",
                     "application/json"
                 ],
                 "tags": [
+                    "Presensi",
                     "Presensi"
                 ],
-                "summary": "Get All Data Presensi.",
+                "summary": "Get By ID Data Presensi.",
                 "responses": {
                     "200": {
                         "description": "OK",
                         "schema": {
                             "$ref": "#/definitions/controller.Presensi"
                         }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
+                    }
+                }
+            }
+        },
+        "/presensi/{id}": {
+            "get": {
+                "description": "Mengambil semua data presensi.\nAmbil per ID data presensi.",
+                "consumes": [
+                    "application/json",
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json",
+                    "application/json"
+                ],
+                "tags": [
+                    "Presensi",
+                    "Presensi"
+                ],
+                "summary": "Get By ID Data Presensi.",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Masukan ID",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/controller.Presensi"
+                        }
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "description": "Not Found"
+                    },
+                    "500": {
+                        "description": "Internal Server Error"
                     }
                 }
             }
